@@ -52,6 +52,8 @@ begin
   inherited;
 // we want a nice shadow effect
   Params.WindowClass.Style := Params.WindowClass.Style or CS_DROPSHADOW;
+// hide the form from the TaskBar
+  Params.ExStyle := Params.ExStyle or WS_EX_TOOLWINDOW;
 // set parent to 0 or the shadow effect is lost when the form is active
   Params.WndParent := 0;
 end;
